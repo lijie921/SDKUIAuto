@@ -23,7 +23,7 @@ public class LaodInterstitial
             Thread.sleep(20000);
             WebElement msgInt=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/message1");
             WebElement showInt=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/show1");
-           // assertTrue(showInt.isEnabled());
+            assertTrue(showInt.isEnabled());
             if(showInt.isEnabled())
             {
                 showInt.click();
