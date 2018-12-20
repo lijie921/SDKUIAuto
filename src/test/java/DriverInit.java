@@ -44,7 +44,7 @@ public class DriverInit
         cap.setCapability("deviceName","8A9X0NTFQ");
         //cap.setCapability("app",apkurl);
         cap.setCapability("appPackage","com.unit.sample_all");//被测app的包名
-        cap.setCapability("appActivity",".HomeActivity");//被测app的入口Activity名称
+        cap.setCapability("appActivity","com.nt.sample.HomeActivity");//被测app的入口Activity名称
 
 
         //运行case前,先卸载已存app,并安装新app,打开app
