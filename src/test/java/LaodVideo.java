@@ -20,7 +20,7 @@ public class LaodVideo
             Thread.sleep(20000);
             WebElement msg=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/message1");
             WebElement show=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/show1");
-           // assertTrue(show.isEnabled());
+            assertTrue(show.isEnabled());
             if(show.isEnabled())
             {
                 show.click();
