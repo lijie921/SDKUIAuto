@@ -48,7 +48,7 @@ public class DriverInit
 
 
         //运行case前,先卸载已存app,并安装新app,打开app
-        cap.setCapability(MobileCapabilityType.FULL_RESET,"true");
+       // cap.setCapability(MobileCapabilityType.FULL_RESET,"true");
 
         try
         {
