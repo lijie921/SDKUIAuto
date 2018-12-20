@@ -53,14 +53,6 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>TestSuite.java</include>
-                        <!--include>DriverInit.java</include>
-                        <include>LoadNative.java</include>
-                        <include>LoadBanner.java</include>
-                        <include>LoadSmartBanner.java</include>
-                        <include>LaodMedium.java</include>
-                        <include>LaodInterstitial.java</include>
-                        <include>LaodVideo.java</include>
-                        <include>QuiteDriver.java</include>-->
                     </includes>
                     <excludes>
                     </excludes>

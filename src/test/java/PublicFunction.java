@@ -17,7 +17,7 @@ public class PublicFunction
     //创建文件夹
     public void CreateFolders(String folderName)
     {
-        String filePath = "D:\\Users\\SDK\\screenShots\\"+folderName;
+        String filePath = "screenShots\\"+folderName;
         File fp = new File(filePath);
 
         if(fp.exists())
@@ -63,7 +63,7 @@ public class PublicFunction
     //截图功能
     public  void screenShot(AndroidDriver driver,String folderName,String ScreenshotName)
     {
-        String filePath = "D:\\Users\\SDK\\screenShots\\"+folderName;
+        String filePath = "SDK\\screenShots\\"+folderName;
         File destFile=new File(filePath+"\\"+ScreenshotName+".png");
         File sourceFile=driver.getScreenshotAs(OutputType.FILE);
         try {

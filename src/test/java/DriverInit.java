@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Properties;
 
 import org.junit.Test;
+import java.io.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
@@ -21,6 +22,7 @@ public class DriverInit
     @BeforeClass
     public static void setUp()
     {
+
         //加载配置文件
         InputStream inStream = DriverInit.class.getClassLoader().getResourceAsStream("BaseConfig");
         Properties prop = new Properties();
@@ -30,15 +32,15 @@ public class DriverInit
             e.printStackTrace();
         }
         phoneName=prop.getProperty("phoneName");
-
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
-        cap.setCapability("deviceName","192.168.5.133:7401");
+        cap.setCapability("deviceName","Android Emulator");
         cap.setCapability("app","D:\\Users\\SDK\\apps\\Sample_All_Mnt_3.4.2_debug_1811022021.apk");
 
         //运行case前,先卸载已存app,并安装新app,打开app
         cap.setCapability(MobileCapabilityType.FULL_RESET,"true");
+
         try
         {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
