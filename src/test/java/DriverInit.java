@@ -42,7 +42,7 @@ public class DriverInit
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
         cap.setCapability("deviceName","8A9X0NTFQ");
-        cap.setCapability("app",apkurl);
+        cap.setCapability("app","root/.jenkins/workspace/test2/target/test-classes/demo.apk");
 
 
         //运行case前,先卸载已存app,并安装新app,打开app
