@@ -21,7 +21,7 @@ public class LoadNative
         //点击show展示广告
         WebElement show=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/show1");
         //断言是否能拿到广告，就看show按钮是否可用，程序是能Load到广告，show按钮才可以用，所以断言show按钮即可
-       // assertTrue(show.isEnabled());
+        assertTrue(show.isEnabled());
         if(show.isEnabled())
         {
             show.click();
