@@ -34,15 +34,17 @@ public class DriverInit
         }
         phoneName=prop.getProperty("phoneName");
 
-        String apkurl=(DriverInit.class.getClassLoader().getResource("demo.apk").getPath()).substring(13);
+        //String apkurl=(DriverInit.class.getClassLoader().getResource("demo.apk").getPath()).substring(13);
 
-        System.out.println(apkurl);
+       // System.out.println(apkurl);
 
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
         cap.setCapability("deviceName","8A9X0NTFQ");
-        cap.setCapability("app",apkurl);
+        //cap.setCapability("app",apkurl);
+        cap.setCapability("appPackage","com.unit.sample_all");//被测app的包名
+        cap.setCapability("appActivity",".HomeActivity");//被测app的入口Activity名称
 
 
         //运行case前,先卸载已存app,并安装新app,打开app
