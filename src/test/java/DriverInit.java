@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import java.io.*;
@@ -32,18 +33,24 @@ public class DriverInit
             e.printStackTrace();
         }
         phoneName=prop.getProperty("phoneName");
+
+        String apkurl=(DriverInit.class.getClassLoader().getResource("demo.apk").getPath()).substring(1);
+
+        System.out.println(apkurl);
+
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
-        cap.setCapability("deviceName","Android Emulator");
-        cap.setCapability("app","D:\\Users\\SDK\\apps\\Sample_All_Mnt_3.4.2_debug_1811022021.apk");
+        cap.setCapability("deviceName","8A9X0NTFQ");
+        cap.setCapability("app",apkurl);
+
 
         //运行case前,先卸载已存app,并安装新app,打开app
         cap.setCapability(MobileCapabilityType.FULL_RESET,"true");
 
         try
         {
-            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+            driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
         }
         catch (Exception e){}
 

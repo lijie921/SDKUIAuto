@@ -63,7 +63,7 @@ public class PublicFunction
     //截图功能
     public  void screenShot(AndroidDriver driver,String folderName,String ScreenshotName)
     {
-        String filePath = "SDK\\screenShots\\"+folderName;
+        String filePath = "screenShots\\"+folderName;
         File destFile=new File(filePath+"\\"+ScreenshotName+".png");
         File sourceFile=driver.getScreenshotAs(OutputType.FILE);
         try {
