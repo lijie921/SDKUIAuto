@@ -34,7 +34,7 @@ public class DriverInit
         }
         phoneName=prop.getProperty("phoneName");
 
-        String apkurl=(DriverInit.class.getClassLoader().getResource("demo.apk").getPath()).substring(1);
+        String apkurl=(DriverInit.class.getClassLoader().getResource("demo.apk").getPath()).substring(13);
 
         System.out.println(apkurl);
 
@@ -42,7 +42,7 @@ public class DriverInit
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
         cap.setCapability("deviceName","8A9X0NTFQ");
-        cap.setCapability("app","root/.jenkins/workspace/test2/target/test-classes/demo.apk");
+        cap.setCapability("app",apkurl);
 
 
         //运行case前,先卸载已存app,并安装新app,打开app
