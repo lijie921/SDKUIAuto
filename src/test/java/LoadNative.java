@@ -13,7 +13,6 @@ public class LoadNative
 
         //请求native广告:先点击native按钮，进入native广告页面
         DriverInit.driver.findElement(By.id("com.unit.sample_all:id/Native")).click();
-        assertTrue(native);
         pb.screenShot(DriverInit.driver,DriverInit.phoneName,"进入Native主页");
         //点击Load按钮请求广告
         DriverInit.driver.findElement(By.id("com.unit.sample_all:id/load1")).click();
