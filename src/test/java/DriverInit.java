@@ -41,7 +41,7 @@ public class DriverInit
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability("automationName","Appium");
         cap.setCapability("platformName","Android");
-        cap.setCapability("deviceName","52005604eef9b4f7");
+        cap.setCapability("deviceName","HT642BE00565");
         //cap.setCapability("app",apkurl);
         cap.setCapability("appPackage","com.unit.sample_all");//被测app的包名
         cap.setCapability("appActivity","com.nt.sample.HomeActivity");//被测app的入口Activity名称
