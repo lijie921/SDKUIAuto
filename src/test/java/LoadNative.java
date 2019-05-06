@@ -19,6 +19,9 @@ public class LoadNative
         pb.screenShot(DriverInit.driver,DriverInit.phoneName,"Native页面点击load按钮");
         //点击show展示广告
         WebElement show=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/show1");
+        
+        DriverInit.driver.navigate().back();
+        /*不做校验
         //断言是否能拿到广告，就看show按钮是否可用，程序是能Load到广告，show按钮才可以用，所以断言show按钮即可
         assertTrue(show.isEnabled());
         if(show.isEnabled())
@@ -50,6 +53,6 @@ public class LoadNative
         }
 
         //展示完广告后，返回主页
-       // DriverInit.driver.navigate().back();
+       // DriverInit.driver.navigate().back();*/
     }
 }
