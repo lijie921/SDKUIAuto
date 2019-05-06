@@ -8,7 +8,7 @@ public class LaodInterstitial
     @Test
     public void getInterstitial()
     {
-        DriverInit.driver.navigate().back();
+       // DriverInit.driver.navigate().back();
 
         PublicFunction pb=new PublicFunction();
         //点击interstitial按钮，进入插屏广告页面
@@ -17,7 +17,7 @@ public class LaodInterstitial
         //点击Load按钮，加载广告
         DriverInit.driver.findElement(By.id("com.unit.sample_all:id/load1")).click();
         pb.screenShot(DriverInit.driver,DriverInit.phoneName,"插屏页面点击load按钮");
-        //展示广告
+       
         Thread.sleep(40000);
         DriverInit.driver.navigate().back();
         /*不做校验
