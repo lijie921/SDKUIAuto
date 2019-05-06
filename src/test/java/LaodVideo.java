@@ -16,7 +16,10 @@ public class LaodVideo
         //点击Load按钮请求广告
         DriverInit.driver.findElement(By.id("com.unit.sample_all:id/load1")).click();
         pb.screenShot(DriverInit.driver,DriverInit.phoneName,"Video主页点击load按钮");
-        /*
+        
+        Thread.sleep(60000);
+        DriverInit.driver.navigate().back();
+        /*不做校验
         try {
             Thread.sleep(20000);
             WebElement msg=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/message1");
@@ -47,8 +50,8 @@ public class LaodVideo
                 pb.screenShot(DriverInit.driver,DriverInit.phoneName,"FailToLoadVideo");
             }
 
-        }catch (Exception e){}*/
+        }catch (Exception e){}
         //展示完广告后，返回主页
-        DriverInit.driver.navigate().back();
+        DriverInit.driver.navigate().back();*/
     }
 }
