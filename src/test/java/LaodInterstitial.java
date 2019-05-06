@@ -18,6 +18,9 @@ public class LaodInterstitial
         DriverInit.driver.findElement(By.id("com.unit.sample_all:id/load1")).click();
         pb.screenShot(DriverInit.driver,DriverInit.phoneName,"插屏页面点击load按钮");
         //展示广告
+        Thread.sleep(40000);
+        DriverInit.driver.navigate().back();
+        /*不做校验
         try
         {
             Thread.sleep(20000);
@@ -38,7 +41,7 @@ public class LaodInterstitial
             }
 
         }
-        catch (Exception e){}
+        catch (Exception e){}*/
         //展示完广告后，返回主页
         //DriverInit.driver.navigate().back();
     }
