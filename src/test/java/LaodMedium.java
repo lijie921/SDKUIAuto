@@ -20,6 +20,9 @@ public class LaodMedium
         //点击getview按钮
         WebElement getviewMedium=pb.findElement(DriverInit.driver,"com.unit.sample_all:id/getView1");
 
+        Thread.sleep(60000);
+        DriverInit.driver.navigate().back();
+        /*不校验广告
         if(getviewMedium.isEnabled())
         {
             getviewMedium.click();
@@ -51,6 +54,6 @@ public class LaodMedium
         }
         assertTrue(getviewMedium.isEnabled());
         //返回主页
-       // DriverInit.driver.navigate().back();
+       // DriverInit.driver.navigate().back();*/
     }
 }
